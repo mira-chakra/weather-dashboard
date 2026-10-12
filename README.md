@@ -36,8 +36,6 @@ npm install
 3. Start the project:
 npm run dev
 4. Open the localhost link shown in the terminal.
-For example:
-http://localhost:5173/
 5. Search for a city name and click Search.
 
 ## API key
