@@ -1,0 +1,13 @@
+{
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "type": "module",
+
+  "scripts": {
+    "dev": "vite"
+  },
+
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

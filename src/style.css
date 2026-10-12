@@ -1,0 +1,369 @@
+/* General page style */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  min-height: 100vh;
+
+  font-family: Arial, sans-serif;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      145deg,
+      #8fb9e8,
+      #667fca,
+      #6557a8
+    );
+
+  padding: 40px 20px;
+}
+
+
+
+/* Main container */
+
+.container {
+  width: 90%;
+
+  max-width: 850px;
+
+  margin: auto;
+}
+
+
+
+/* Header and title */
+
+.header {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin-bottom: 8px;
+
+  font-size: 38px;
+}
+
+.header p {
+  margin-top: 0;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+/* Search area */
+
+.search-box {
+  display: flex;
+
+  gap: 10px;
+
+  max-width: 650px;
+
+  margin: auto;
+
+  padding: 10px;
+
+  background-color:
+    rgba(255, 255, 255, 0.18);
+
+  border-radius: 18px;
+}
+
+.search-box input {
+  flex: 1;
+
+  padding: 14px 16px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 16px;
+
+  background-color:
+    rgba(255, 255, 255, 0.9);
+
+  color: #333;
+}
+
+.search-box button {
+  padding: 14px 25px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background-color: white;
+
+  color: #5a62b5;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* Small effect when the mouse is over the button */
+
+.search-box button:hover {
+  background-color: #eeeeee;
+}
+
+
+/* Style used while the API request is loading */
+
+.search-box button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+
+/* Message for loading, success or error */
+
+.status {
+  text-align: center;
+
+  margin: 18px 0 25px;
+
+  color:
+    rgba(255, 255, 255, 0.9);
+}
+
+
+
+/* Main card that contains the weather */
+
+.weather-card {
+  background-color:
+    rgba(255, 255, 255, 0.18);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 28px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* City name and weather icon */
+
+.weather-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.current-label {
+  margin: 0 0 8px;
+
+  font-size: 14px;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+}
+
+#location-name {
+  margin: 0;
+
+  font-size: 30px;
+}
+
+
+
+/* Weather icon */
+
+.weather-icon-box {
+  width: 100px;
+
+  height: 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color:
+    rgba(255, 255, 255, 0.15);
+
+  border-radius: 25px;
+}
+
+#weather-icon {
+  font-size: 65px;
+}
+
+
+
+/* Temperature and weather condition */
+
+.temperature-section {
+  margin-top: 40px;
+
+  margin-bottom: 35px;
+}
+
+#temperature {
+  margin: 0;
+
+  font-size: 75px;
+
+  font-weight: bold;
+}
+
+#weather-description {
+  margin-top: 5px;
+
+  font-size: 20px;
+
+  color:
+    rgba(255, 255, 255, 0.85);
+}
+
+
+
+/* Small cards for extra weather information */
+
+.weather-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+.detail-card {
+  background-color:
+    rgba(255, 255, 255, 0.16);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.2);
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  text-align: center;
+}
+
+.detail-card p {
+  margin-top: 0;
+
+  margin-bottom: 12px;
+
+  font-size: 14px;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+}
+
+.detail-card strong {
+  font-size: 19px;
+}
+
+
+
+/* Hide the weather result before a search */
+
+.hidden {
+  display: none;
+}
+
+
+
+/* Make the layout fit smaller screens */
+
+@media (max-width: 750px) {
+
+  .weather-details {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+
+/* Mobile layout */
+
+@media (max-width: 500px) {
+
+  body {
+    padding: 25px 15px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 29px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .weather-card {
+    padding: 22px;
+  }
+
+  #location-name {
+    font-size: 24px;
+  }
+
+  .weather-icon-box {
+    width: 80px;
+
+    height: 80px;
+  }
+
+  #weather-icon {
+    font-size: 50px;
+  }
+
+  #temperature {
+    font-size: 58px;
+  }
+
+  .weather-details {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .detail-card {
+    padding: 15px 10px;
+  }
+
+}

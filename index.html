@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Weather Dashboard</title>
+
+  <link
+    rel="stylesheet"
+    href="./src/style.css"
+  >
+</head>
+
+
+<body>
+
+  <main class="container">
+
+
+    <!--
+      Main title of the application.
+    -->
+
+    <header class="header">
+
+      <h1>Weather Dashboard</h1>
+
+      <p>
+        Check the current weather in your city
+      </p>
+
+    </header>
+
+
+
+    <!--
+      Search area.
+      The user writes a city name and submits
+      the form to request its weather.
+    -->
+
+    <form id="search-form" class="search-box">
+
+      <input
+        id="city-input"
+        type="text"
+        placeholder="Enter city name"
+      >
+
+      <button
+        id="search-btn"
+        type="submit"
+      >
+        Search
+      </button>
+
+    </form>
+
+
+
+    <!--
+      This paragraph is used for messages such as:
+      loading, success and errors.
+    -->
+
+    <p id="status" class="status">
+      Enter a city name to start.
+    </p>
+
+
+
+    <!--
+      Weather information is hidden at first.
+      JavaScript removes the hidden class
+      when the API returns weather data.
+    -->
+
+    <section
+      id="weather-result"
+      class="weather-card hidden"
+    >
+
+
+      <!-- TOP PART -->
+
+      <div class="weather-top">
+
+        <div>
+
+          <p class="current-label">
+            Current Weather
+          </p>
+
+          <h2 id="location-name">
+            City
+          </h2>
+
+        </div>
+
+
+        <div class="weather-icon-box">
+
+          <span id="weather-icon">
+            ☀️
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- TEMPERATURE -->
+
+      <div class="temperature-section">
+
+        <p id="temperature">
+          --°C
+        </p>
+
+        <p id="weather-description">
+          Condition
+        </p>
+
+      </div>
+
+
+
+      <!-- EXTRA WEATHER INFORMATION -->
+
+      <div class="weather-details">
+
+
+        <div class="detail-card">
+
+          <p>
+            Feels Like
+          </p>
+
+          <strong id="feels-like">
+            --°C
+          </strong>
+
+        </div>
+
+
+
+        <div class="detail-card">
+
+          <p>
+            Humidity
+          </p>
+
+          <strong id="humidity">
+            --%
+          </strong>
+
+        </div>
+
+
+
+        <div class="detail-card">
+
+          <p>
+            Wind Speed
+          </p>
+
+          <strong id="wind-speed">
+            -- km/h
+          </strong>
+
+        </div>
+
+
+
+        <div class="detail-card">
+
+          <p>
+            Time
+          </p>
+
+          <strong id="day-night">
+            --
+          </strong>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script
+    type="module"
+    src="./src/main.js"
+  ></script>
+
+</body>
+
+</html>
